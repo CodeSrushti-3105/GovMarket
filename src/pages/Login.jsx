@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Login = ({ onBack }) => {
+const Login = ({ onBack, onGoToSignup }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -65,9 +65,9 @@ const Login = ({ onBack }) => {
 
         <div className="mt-8 text-center text-sm text-slate-500">
           Don't have an account?{' '}
-          <a href="#" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+          <button onClick={onGoToSignup} type="button" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
             Sign up
-          </a>
+          </button>
         </div>
         
       </div>
