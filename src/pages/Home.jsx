@@ -15,6 +15,7 @@ import {
 const Home = ({ onLoginClick, onSignupClick }) => {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-4 md:px-10 bg-white border-b border-slate-100 sticky top-0 z-50">
         <div className="flex items-center">
           <span className="text-xl md:text-2xl font-bold text-blue-900">
@@ -37,6 +38,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="px-6 py-16 md:py-24 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="flex-1 space-y-8 z-10 text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
@@ -57,9 +59,11 @@ const Home = ({ onLoginClick, onSignupClick }) => {
           </div>
         </div>
         <div className="flex-1 relative w-full max-w-lg mx-auto lg:max-w-none h-[400px] lg:h-[500px]">
+          {/* Abstract background shape for the building image */}
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-blue-50 rounded-[40px] transform rotate-3 overflow-hidden shadow-2xl transition-transform hover:rotate-2 duration-500">
              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Building Architecture" className="w-full h-full object-cover opacity-90 mix-blend-multiply" />
           </div>
+          {/* Floating Stats Card */}
           <div className="absolute -bottom-6 -left-4 lg:bottom-10 lg:-left-12 bg-white p-5 rounded-2xl shadow-xl flex items-center gap-5 border border-slate-50 animate-bounce" style={{animationDuration: '3s'}}>
             <div className="bg-blue-100 p-3 rounded-xl text-blue-600">
               <CheckCircle2 className="w-6 h-6" />
@@ -75,12 +79,14 @@ const Home = ({ onLoginClick, onSignupClick }) => {
         </div>
       </section>
 
+      {/* Features Section (Platform Stakeholders) */}
       <section className="bg-slate-100 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Platform Stakeholders</h2>
           <div className="w-16 h-1 bg-blue-600 mb-10 rounded-full"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Government Buyer */}
             <div className="col-span-1 md:col-span-2 bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow flex flex-col justify-between">
               <div>
                 <div className="bg-blue-50 w-14 h-14 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
@@ -97,6 +103,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
             </div>
 
             <div className="flex flex-col gap-6">
+              {/* Seller */}
               <div className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow flex-1 flex flex-col justify-between">
                 <div>
                   <div className="bg-teal-50 w-14 h-14 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
@@ -112,6 +119,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
                 </a>
               </div>
 
+              {/* OEM */}
               <div className="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow flex-1 flex flex-col justify-between">
                 <div>
                   <div className="bg-indigo-50 w-14 h-14 rounded-2xl flex items-center justify-center text-indigo-600 mb-6">
@@ -128,6 +136,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
               </div>
             </div>
             
+            {/* Investor Relations */}
             <div className="col-span-1 md:col-span-3 bg-[#42618A] rounded-[2rem] p-8 md:p-10 shadow-lg text-white flex flex-col md:flex-row items-center justify-between gap-10 mt-2">
               <div className="max-w-xl">
                 <div className="bg-white/10 w-14 h-14 rounded-2xl flex items-center justify-center text-white mb-6 backdrop-blur-sm">
@@ -151,6 +160,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
         </div>
       </section>
 
+      {/* How It Works Section */}
       <section className="py-24 bg-white px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">The Procurement Lifecycle</h2>
@@ -159,8 +169,10 @@ const Home = ({ onLoginClick, onSignupClick }) => {
           </p>
 
           <div className="relative flex flex-col md:flex-row justify-between items-center gap-12 md:gap-4">
+            {/* Connecting Line hidden on mobile */}
             <div className="hidden md:block absolute top-[2.5rem] left-[10%] right-[10%] h-[1px] bg-slate-200 border-t border-dashed border-slate-300 z-0"></div>
 
+            {/* Step 1 */}
             <div className="relative z-10 flex flex-col items-center max-w-[220px] mx-auto bg-white pt-2">
               <div className="w-20 h-20 rounded-2xl bg-white border-2 border-blue-600 shadow-xl shadow-blue-50 flex items-center justify-center text-blue-600 mb-6 relative">
                 <FileText className="w-8 h-8" />
@@ -170,6 +182,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
               <p className="text-xs text-slate-500 leading-relaxed px-2">Digital verification and standardisation of project requirements.</p>
             </div>
 
+            {/* Step 2 */}
             <div className="relative z-10 flex flex-col items-center max-w-[220px] mx-auto bg-white pt-2">
               <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-100 flex items-center justify-center text-slate-600 mb-6 relative hover:border-blue-200 transition-colors">
                 <Gavel className="w-8 h-8" />
@@ -179,6 +192,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
               <p className="text-xs text-slate-500 leading-relaxed px-2">Transparent reverse auction mechanism for competitive pricing.</p>
             </div>
 
+            {/* Step 3 */}
             <div className="relative z-10 flex flex-col items-center max-w-[220px] mx-auto bg-white pt-2">
               <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-100 flex items-center justify-center text-slate-600 mb-6 relative hover:border-blue-200 transition-colors">
                 <Award className="w-8 h-8" />
@@ -188,6 +202,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
               <p className="text-xs text-slate-500 leading-relaxed px-2">Automated evaluation based on cost-technical merit.</p>
             </div>
 
+            {/* Step 4 */}
             <div className="relative z-10 flex flex-col items-center max-w-[220px] mx-auto bg-white pt-2">
               <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-100 flex items-center justify-center text-slate-600 mb-6 relative hover:border-blue-200 transition-colors">
                 <Truck className="w-8 h-8" />
@@ -200,6 +215,7 @@ const Home = ({ onLoginClick, onSignupClick }) => {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-white border-t border-slate-100 py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
