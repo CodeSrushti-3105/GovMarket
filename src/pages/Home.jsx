@@ -12,7 +12,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-const Home = () => {
+const Home = ({ onLoginClick }) => {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       <nav className="flex items-center justify-between px-6 py-4 md:px-10 bg-white border-b border-slate-100 sticky top-0 z-50">
@@ -28,7 +28,7 @@ const Home = () => {
           <a href="#" className="hover:text-blue-600 transition-colors pb-1">Contact</a>
         </div>
         <div className="flex items-center space-x-4">
-          <button className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+          <button onClick={onLoginClick} className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
             Login
           </button>
           <button className="text-sm font-medium bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm shadow-blue-200">
