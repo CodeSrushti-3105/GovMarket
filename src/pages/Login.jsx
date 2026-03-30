@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-const Login = ({ onBack, onGoToSignup }) => {
+const Login = ({ onBack, onGoToSignup, onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, password });
+    if (onLoginSuccess) onLoginSuccess();
   };
 
   return (

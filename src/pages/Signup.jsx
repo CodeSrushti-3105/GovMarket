@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Signup = ({ onBack, onGoToLogin }) => {
+const Signup = ({ onBack, onGoToLogin, onSignupSuccess }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +11,7 @@ const Signup = ({ onBack, onGoToLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Signup form submitted:', formData);
+    if (onSignupSuccess) onSignupSuccess();
   };
 
   const handleChange = (e) => {
